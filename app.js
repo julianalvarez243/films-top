@@ -28,11 +28,16 @@ const loadFilms = async() => {
 
             let peliculas = '';
             datos.results.forEach(pelicula => { 
+               let forAdult = "+10 years"
+                if (pelicula.adult) {
+                    forAdult = "+18 years"
+                }
                 peliculas += `
                 <div class="film">
                 <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}
                 ">
                 <h3 class="title">${pelicula.title}</h3>
+                <p class="description">${pelicula.overview}</p>
                 </div>
                 `;
             });

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Madimi+One&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
 
 * {
 	margin: 0;
@@ -7,8 +8,10 @@
 }
 
 body {
-	background: #e0e0e0;
-	color: #1d1d1d;
+	background: #241744;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+
 }
 
 .titleMain {
@@ -18,22 +21,26 @@ body {
 
 .titleMain h1 {
 	text-align: center;
-	font-family: "Monoton", sans-serif;
+    font-family: "Anta", sans-serif;
 	font-size: 50px;
 	margin-top: 20px;
-	border-bottom-left-radius: 30px;
+	border-top-left-radius: 30px;
 	border-bottom-right-radius: 30px;
-	border-top: 3px solid #100a1f;
-	border-left: 3px solid #100a1f;
-	border-right: 3px solid #100a1f;
-	border-bottom: 3px solid #100a1f;
+	border-top: 3px solid white;
+	border-left: 3px solid white;
+	border-right: 3px solid white;
+	border-bottom: 3px solid white;
 }
+
+.description {
+	display: none;
+}
+
 
 .content {
 	width: 90%;
 	max-width: 1000px;
 	margin: 40px auto 100px auto;
-
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 40px;
@@ -41,6 +48,16 @@ body {
 
 .content .film {
 	text-align: center;
+}
+
+.film:hover .description {
+	display: flex;
+}
+
+.film:hover {
+	background-color: #241744;
+	color: white;
+	border-radius: 10px;
 }
 
 .content .film .title {
@@ -77,7 +94,6 @@ body {
 	background: #241744;
 	color: #fff;
 	border-radius: 100px;
-	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	transition: .3s ease all;
 }
